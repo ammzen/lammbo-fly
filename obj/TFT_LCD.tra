@@ -1,0 +1,56 @@
+*** Creating Trace Output File '.\obj\TFT_LCD.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\cortexm3_macro.o"'
+### List of Objects: adding '".\obj\stm32f10x_vector.o"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\obj\key.o"'
+### List of Objects: adding '".\obj\com.o"'
+### List of Objects: adding '".\obj\rtc_time.o"'
+### List of Objects: adding '".\obj\ioi2c.o"'
+### List of Objects: adding '".\obj\delay.o"'
+### List of Objects: adding '".\obj\moto-tim.o"'
+### List of Objects: adding '".\obj\led.o"'
+### List of Objects: adding '".\obj\eeprom.o"'
+### List of Objects: adding '".\obj\mpu6050.o"'
+### List of Objects: adding '".\obj\fc.o"'
+### List of Objects: adding '".\obj\hmc5883.o"'
+### List of Objects: adding '".\obj\my_math.o"'
+### List of Objects: adding '".\obj\adc.o"'
+### List of Objects: adding '".\obj\wifi_703n.o"'
+### List of Objects: adding '".\obj\ppm_parallel.o"'
+### List of Objects: adding '".\obj\stm32f10x_adc.o"'
+### List of Objects: adding '".\obj\stm32f10x_bkp.o"'
+### List of Objects: adding '".\obj\stm32f10x_crc.o"'
+### List of Objects: adding '".\obj\stm32f10x_dac.o"'
+### List of Objects: adding '".\obj\stm32f10x_dbgmcu.o"'
+### List of Objects: adding '".\obj\stm32f10x_dma.o"'
+### List of Objects: adding '".\obj\stm32f10x_exti.o"'
+### List of Objects: adding '".\obj\stm32f10x_flash.o"'
+### List of Objects: adding '".\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '".\obj\stm32f10x_lib.o"'
+### List of Objects: adding '".\obj\stm32f10x_nvic.o"'
+### List of Objects: adding '".\obj\stm32f10x_pwr.o"'
+### List of Objects: adding '".\obj\stm32f10x_rcc.o"'
+### List of Objects: adding '".\obj\stm32f10x_rtc.o"'
+### List of Objects: adding '".\obj\stm32f10x_spi.o"'
+### List of Objects: adding '".\obj\stm32f10x_systick.o"'
+### List of Objects: adding '".\obj\stm32f10x_tim.o"'
+### List of Objects: adding '".\obj\stm32f10x_usart.o"'
+### List of Objects: adding '".\obj\stm32f10x_wwdg.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\cortexm3_macro.o" ".\obj\stm32f10x_vector.o" ".\obj\main.o" ".\obj\stm32f10x_it.o" ".\obj\key.o" ".\obj\com.o" ".\obj\rtc_time.o" ".\obj\ioi2c.o" ".\obj\delay.o" ".\obj\moto-tim.o" ".\obj\led.o" ".\obj\eeprom.o" ".\obj\mpu6050.o" ".\obj\fc.o" ".\obj\hmc5883.o" ".\obj\my_math.o" ".\obj\adc.o" ".\obj\wifi_703n.o" ".\obj\ppm_parallel.o" ".\obj\stm32f10x_adc.o" ".\obj\stm32f10x_bkp.o" ".\obj\stm32f10x_crc.o" ".\obj\stm32f10x_dac.o" ".\obj\stm32f10x_dbgmcu.o" ".\obj\stm32f10x_dma.o" ".\obj\stm32f10x_exti.o" ".\obj\stm32f10x_flash.o" ".\obj\stm32f10x_gpio.o" ".\obj\stm32f10x_lib.o" ".\obj\stm32f10x_nvic.o" ".\obj\stm32f10x_pwr.o" ".\obj\stm32f10x_rcc.o" ".\obj\stm32f10x_rtc.o" ".\obj\stm32f10x_spi.o" ".\obj\stm32f10x_systick.o" ".\obj\stm32f10x_tim.o" ".\obj\stm32f10x_usart.o" ".\obj\stm32f10x_wwdg.o" --strict --scatter ".\obj\TFT_LCD.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\lis\TFT_LCD.map" -o ".\obj\TFT_LCD.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\obj\TFT_LCD.axf'
+### ADS-LD Command File: '.\obj\TFT_LCD.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\obj\TFT_LCD.lnp', Handle=0x000003B0
+### Writing '.lnp' file
+### ADS-LD Command file '.\obj\TFT_LCD.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

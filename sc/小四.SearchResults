@@ -1,0 +1,54 @@
+---- S_6050. 匹配 (61 在 2 文件 ) ----
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 	dub_show.AngNick=S_6050.AngNick;	//角度
+Fc.c (g:\going\小四轴\软件\mid_four\app):		dub_show.AccNick=S_6050.AccNick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):  		/*dub_show.AngRoll=S_6050.AngRoll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):  		dub_show.AccRoll=S_6050.AccRoll;	//角加速度
+Fc.c (g:\going\小四轴\软件\mid_four\app):  		dub_show.AccGier=S_6050.AccGier;
+Fc.c (g:\going\小四轴\软件\mid_four\app):						S_6050.AccGier=0;	
+Fc.c (g:\going\小四轴\软件\mid_four\app):				//S_6050.AccNick+=Lcom.Nick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):				//S_6050.AccRoll+=Lcom.Roll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):			/*M_f_tem=M_f_tem + PID.ACC_P*S_6050.AccNick*batt_P + PID.Gier_P*S_6050.AccGier*batt_P; 		//前
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_b_tem=M_b_tem - PID.ACC_P*S_6050.AccNick*batt_P + PID.Gier_P*S_6050.AccGier*batt_P;		//后
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_l_tem=M_l_tem - PID.ACC_P*S_6050.AccRoll*batt_P - PID.Gier_P*S_6050.AccGier*batt_P;		//左
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_r_tem=M_r_tem + PID.ACC_P*S_6050.AccRoll*batt_P - PID.Gier_P*S_6050.AccGier*batt_P;		//右*/
+Fc.c (g:\going\小四轴\软件\mid_four\app):			M_f_tem=M_f_tem + PI_tem1*S_6050.AccNick + PI_tem2*S_6050.AccGier; 		//前
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_b_tem=M_b_tem - PI_tem1*S_6050.AccNick + PI_tem2*S_6050.AccGier;		//后
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_l_tem=M_l_tem - PI_tem1*S_6050.AccRoll - PI_tem2*S_6050.AccGier;		//左
+Fc.c (g:\going\小四轴\软件\mid_four\app):	 		M_r_tem=M_r_tem + PI_tem1*S_6050.AccRoll - PI_tem2*S_6050.AccGier;		//右
+Fc.c (g:\going\小四轴\软件\mid_four\app):				//UART1_Put_int(S_6050.AccNick);
+Fc.c (g:\going\小四轴\软件\mid_four\app):				Int.Nick +=	 S_6050.AccNick - Lcom.Nick;  
+Fc.c (g:\going\小四轴\软件\mid_four\app):				Int.Roll +=	 S_6050.AccRoll - Lcom.Roll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):				Int.Gier +=	 S_6050.AccGier; 
+Fc.c (g:\going\小四轴\软件\mid_four\app):				Int2.Nick +=S_6050.AccNick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):				Int2.Roll +=S_6050.AccRoll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):				  	tem_N=S_6050.AngNick*scal_AngAcc - Int.Nick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					tem_R=S_6050.AngRoll*scal_AngAcc - Int.Roll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					angInt.Nick+=S_6050.AngNick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					angInt.Roll+=S_6050.AngRoll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					CInt.Nick+= S_6050.AngNick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					CInt.Roll+= S_6050.AngRoll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					Cdif.Nick= S_6050.AngNick - C_6050.AngNick;//Cdif.Nick;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					Cdif.Roll= S_6050.AngRoll - C_6050.AngRoll;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					UART1_Put_int(S_6050.AngNick);
+Fc.c (g:\going\小四轴\软件\mid_four\app):				  	M_f_tem=M_f_tem + S_6050.AngNick*PID.Center_P + CInt.Nick*PID.Center_I + Cdif.Nick*PID.Center_D;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					M_b_tem=M_b_tem - S_6050.AngNick*PID.Center_P - CInt.Nick*PID.Center_I - Cdif.Nick*PID.Center_D;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					M_l_tem=M_l_tem - S_6050.AngRoll*PID.Center_P - CInt.Roll*PID.Center_I - Cdif.Roll*PID.Center_D;
+Fc.c (g:\going\小四轴\软件\mid_four\app):					M_r_tem=M_r_tem + S_6050.AngRoll*PID.Center_P + CInt.Roll*PID.Center_I + Cdif.Roll*PID.Center_D; 
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	S_6050.AngRoll=	(((AdWert_AngRoll>>r_move))-AngX_mid); //下为减
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	S_6050.AngNick= -(((AdWert_AngNick>>r_move))-AngY_mid);	//左为减
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	//S_6050.AngHoch=((AdWert_AngHoch>>r_move))-AngZ_mid;
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	S_6050.AccRoll=((AdWertRoll>>6)-AccX_mid); //下为减						
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	S_6050.AccNick=((AdWertNick>>6)-AccY_mid);	 //左为减
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	S_6050.AccGier=-((AdWertGier>>6)-AccZ_mid); //左旋为减
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	 	S_6050.AngNick=	AngX_mid; 
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):		S_6050.AngRoll= AngY_mid;	
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):		//S_6050.AngHoch=AngZ_mid;
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):		S_6050.AccNick= AccX_mid; 						
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):		S_6050.AccRoll= AccY_mid;	 
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):		S_6050.AccGier= AccZ_mid; 
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	UART1_Put_int(S_6050.AccRoll);
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	UART1_Put_int(S_6050.AccNick);
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	UART1_Put_int(S_6050.AccGier);
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	//UART1_Put_int(S_6050.AngHoch); 
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	UART1_Put_int(S_6050.AngRoll);	*/
+MPU6050.c (g:\going\小四轴\软件\mid_four\app):	UART1_Put_int(S_6050.AngNick);	
